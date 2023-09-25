@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Equarz.Testcases.Cart">
+      <class name="com.Equarz.Testcases.Wishlisttest">
         <methods>
-          <include name="close"/>
-          <include name="Verifyhomecart"/>
-          <include name="initialization"/>
+          <include name="removeWishlist"/>
+          <include name="Categorywishlisttest"/>
+          <include name="Searchbox_towishlist"/>
+          <include name="Product_dealofday"/>
+          <include name="Bannertest"/>
+          <include name="Hompageproduct"/>
+          <include name="footerbanner"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.Equarz.Testcases.Cart -->
+      </class> <!-- com.Equarz.Testcases.Wishlisttest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

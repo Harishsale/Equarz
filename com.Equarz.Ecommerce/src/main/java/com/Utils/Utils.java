@@ -1,15 +1,19 @@
 package com.Utils;
 
+import com.Pageobjects.homepage;
 import com.base.Testbase;
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.Set;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 public class Utils {
 	//C:\Users\Dell\git\Eccomerce_Project\com.Equarz.Ecommerce\src\main\java\com\testdata\Test.xlsx
@@ -36,6 +40,25 @@ public class Utils {
 		}
 		return data;
 	}
+	public  void dropdown(WebElement value, String text) {
+		Select sel = new Select(value);
+		sel.selectByValue(text);
+
+	}
+	public homepage Windowhandless(String window)
+	{
+		Set<String> handles = driver.getWindowHandles();
+		for (String hand : handles) {
+			if (!window.equals(hand)) {
+				driver.switchTo().window(hand);
+				driver.manage().window().maximize();
+				
+				
+			}
+		}
+		return new homepage();
+	}
+	
 }
 
 

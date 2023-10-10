@@ -20,6 +20,7 @@ public class Testbase {
 	FileInputStream file;
 	public static Properties props;
 	public static WebDriver driver;
+	public String window1;
 
 	public Testbase() {
 		
